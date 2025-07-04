@@ -3706,16 +3706,16 @@ type BotAuth struct {
 // Application Command Structure
 // https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-structure
 type ApplicationCommand struct {
-	ID                       string                      `json:"id"`
+	ID                       string                      `json:"id,omitempty"`
 	Type                     *Flag                       `json:"type,omitempty"`
-	ApplicationID            string                      `json:"application_id"`
+	ApplicationID            string                      `json:"application_id,omitempty"`
 	GuildID                  *string                     `json:"guild_id,omitempty"`
 	Name                     string                      `json:"name"`
 	NameLocalizations        *map[string]string          `json:"name_localizations,omitempty"`
 	Description              string                      `json:"description"`
 	DescriptionLocalizations *map[string]string          `json:"description_localizations,omitempty"`
 	Options                  []*ApplicationCommandOption `json:"options,omitempty"`
-	DefaultMemberPermissions *string                     `json:"default_member_permissions"`
+	DefaultMemberPermissions *string                     `json:"default_member_permissions,omitempty"`
 	NSFW                     *bool                       `json:"nsfw,omitempty"`
 	IntegrationTypes         []Flag                      `json:"integration_types,omitempty"`
 	Contexts                 *[]Flag                     `json:"contexts,omitempty"`
